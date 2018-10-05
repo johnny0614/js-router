@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Router</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a class="js-router-link router-link" href="/">Home</a></li>
+            <li><a class="js-router-link router-link" href="/about/">About</a></li>
+            <li><a class="js-router-link router-link" href="/contact/">Contact</a></li>
+            <li><a class="js-router-link router-link" href="/portfolio/">Portolio</a></li>
+        </ul>
+    </nav>
+
+    <!-- These are custom elements. Fully valid HTML5 markup. -->
+    <app-view class="view home" loaded="true" route="^/$">
+        <h1>Home</h1>
+        <p>Welcome to the website</p>
+    </app-view>
+
+    <app-view class="view about" route="^/about/(.*)">
+        <h1>About</h1>
+    </app-view>
+
+    <app-view class="view contact" route="^/contact/(.*)">
+        <h1>contact</h1>
+    </app-view>
+
+    <app-view class="view portfolio" route="^/portfolio/(.*)">
+        <h1>Portfolio</h1>
+    </app-view>
+
+    <script type="module" src="/static/js/main.js"></script>
+</body>
+
+</html>
